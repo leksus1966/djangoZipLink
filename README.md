@@ -33,6 +33,12 @@ $  source .venv/bin/activate
 ```
 $ python3 -m pip install -r requirements.txt
 ```
+**Install PostgreSQL and create database `shortener_db`**
+```bash
+$ psql -U postgres
+postgres# CREATE DATABASE shortener_db;
+```
+
 **Apply migrations**
 ```
 $ python3 manage.py migrate
@@ -86,7 +92,7 @@ http://127.0.0.1:8000/api/<short_code>/
 - Python 3.13
 - Django 5.2.6
 - Django REST Framework 3.16.1
-- PostgreSQL 15
+- PostgreSQL 16.9
 - Docker + docker-compose
 
 ---
