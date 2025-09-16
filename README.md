@@ -99,7 +99,7 @@ http://127.0.0.1:8000/api/<short_code>/
 
 ## 🗄 Connecting to PostgreSQL inside a container
 
-By default, the `db` service with PostgreSQL 15 is enabled in docker-compose.
+By default, the `db` service with PostgreSQL 16 is enabled in docker-compose.
 
 ### Access to the database:
 - **Host:** localhost
@@ -107,6 +107,9 @@ By default, the `db` service with PostgreSQL 15 is enabled in docker-compose.
 - **Database:** shortener_db
 - **User:** postgres
 - **Password:** postgres
+---
+- I included the `entrypoint.sh` script to ensure the Postgres db is ready to receive connections.
+This is very important for running the application via docker-compose.
 
 ### Connecting via psql (locally):
 ```bash
